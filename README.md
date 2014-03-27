@@ -1,6 +1,6 @@
 # AdjustmentBureau
 
-TODO: Write a gem description
+A CSS Property Parser with the simple task of applying a numeric adjustment to property values.
 
 ## Installation
 
