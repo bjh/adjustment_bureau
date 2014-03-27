@@ -4,9 +4,8 @@ module AdjustmentBureau
   class Adjuster
     attr_accessor :properties, :type, :amount
 
-    def initialize(adjustable_properties, type, amount)
-      # TODO: make sure all keys are strings instead of symbols
-      @properties = adjustable_properties
+    def initialize(adjustable_properties_list, type, amount)
+      @properties = adjustable_properties_list.map &:to_s
       @type = type
       @amount = amount
     end
@@ -14,12 +13,13 @@ module AdjustmentBureau
     def adjust(property_string)
       property = Property.parse(property_string)
       property.adjust(type, amount) if adjustable? property
+      property
     end
 
   private
 
     def adjustable?(property)
-      @properties.has_key? property.to_s
+      @properties.include? property.name
     end
   end
 end

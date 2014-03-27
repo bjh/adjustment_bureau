@@ -12,7 +12,6 @@ describe AdjustmentBureau::Parser do
 
     it 'handles multiple values' do
       name, values = parser.parse('margin: 1px 2px 3px 4px;')
-      puts "values: #{values}"
       expect(values).to be_a Array
     end
 
@@ -21,6 +20,11 @@ describe AdjustmentBureau::Parser do
       expect(name).to eq 'font-size'
       expect(values.first.value).to eq 10
       # expect(unit).to eq 'pt'
+    end
+
+    it 'handles floatin point numbers for values' do
+      name, values = parser.parse('font-size: 10.4pt;')
+      expect(values.first.value).to eq 10.4
     end
   end
 end

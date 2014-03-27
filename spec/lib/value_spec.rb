@@ -9,6 +9,16 @@ describe AdjustmentBureau::Value do
       value.adjust(:+, 12)
       expect(value.to_s).to eq '24px'
     end
+
+    it 'handles floating point values' do
+      value.adjust(:+, 12.12)
+      expect(value.to_s).to eq '24.12px'
+    end
+
+    it 'rounds floating point numbers to two places' do
+      value.adjust(:+, 12.78888)
+      expect(value.to_s).to eq '24.79px'
+    end
   end
 
   describe '#to_s' do
