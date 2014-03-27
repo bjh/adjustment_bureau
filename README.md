@@ -1,6 +1,16 @@
 # AdjustmentBureau
 
-A CSS Property Parser with the simple task of applying a numeric adjustment to property values.
+A CSS Property Parser with the simple task of applying a numeric adjustment to property values.  
+
+**NOTE:** this does not parse CSS, it parses CSS property strings only. i.e. `margin: 1px 2px 3px 4px;`.
+
+## Example
+
+```
+  property = AdjustmentBureau::Property.parse('margin: 1px 2px 3px 4px;')
+  property.adjust(:+, 10)
+  expect(property.to_s).to eq 'margin: 11px 12px 13px 14px;'
+```
 
 ## Installation
 
