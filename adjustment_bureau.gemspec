@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["fake@fake.com"]
   spec.summary       = %q{A CSS property adjuster}
   spec.description   = %q{Something I needed at work so I gemmed it up...}
-  spec.homepage      = ""
+  spec.homepage      = "https://github.com/bjh/adjustment_bureau"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
