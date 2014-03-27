@@ -6,7 +6,7 @@ A CSS Property Parser with the simple task of applying a numeric adjustment to p
 
 ## Example
 
-```
+```ruby
   property = AdjustmentBureau::Property.parse('margin: 1px 2px 3px 4px;')
   property.adjust(:+, 10)
   expect(property.to_s).to eq 'margin: 11px 12px 13px 14px;'
