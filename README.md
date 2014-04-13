@@ -1,5 +1,9 @@
 # AdjustmentBureau
 
+[![Build Status](https://travis-ci.org/bjh/adjustment_bureau.svg?branch=master)](https://travis-ci.org/bjh/adjustment_bureau)
+[![Gem Version](https://badge.fury.io/rb/adjustment_bureau.svg)](http://badge.fury.io/rb/adjustment_bureau)
+[![Coverage Status](https://coveralls.io/repos/bjh/adjustment_bureau/badge.png?branch=master)](https://coveralls.io/r/bjh/adjustment_bureau?branch=master)
+
 A CSS Property Parser with the simple task of applying a numeric adjustment to property values.  
 
 **NOTE:** this does not parse CSS, it parses CSS property strings only. i.e. `margin: 1px 2px 3px 4px;`.
